@@ -14,6 +14,9 @@ public final class KuxiaConfig {
 
     /** 内置整合包在 assets 中的目录名。 */
     public static final String ASSET_DIR = "kuxia_modpack";
+    /** 游戏核心在 assets 中的目录与版本戳（核心变化时递增触发重解压）。 */
+    public static final String CORE_ASSET_DIR = "kuxia_core";
+    public static final int CORE_VERSION = 1;
 
     /**
      * 整合包版本戳：内置内容更新时递增，

@@ -18,16 +18,18 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 /**
- * 内置整合包安装器：首启（或整合包版本升级后）把 APK assets 里的
- * kuxia_modpack 解压到公共游戏目录，玩家无需手动拷贝任何文件。
+ * 内置整合包安装器：首启（或版本升级后）把 APK assets 里的内容
+ * 解压到公共游戏目录，玩家无需联网下载、无需手动拷贝任何文件。
  *
- * 语义：
- * - mods / config / resourcepacks 由服务器控制，版本升级时整体重建；
- * - options.txt / servers.dat 仅在缺失时写入，不覆盖玩家已有设置。
+ * - 核心部分（kuxia_core：versions/libraries/assets = MC 1.12.2 + Forge 2847）
+ *   独立版本戳，正常情况只解压一次；
+ * - 整合包部分（kuxia_modpack）：mods/config/resourcepacks 随版本重建；
+ *   options.txt/servers.dat 仅缺失时写入，不覆盖玩家已有设置。
  */
 public final class KuxiaPackInstaller {
 
     private static final String STAMP_FILE = ".kuxia_pack";
+    private static final String CORE_STAMP_FILE = ".kuxia_core";
 
     /** 服务器控制、随版本重建的目录。 */
     private static final String[] MANAGED_DIRS = {"mods", "config", "resourcepacks"};
@@ -35,20 +37,55 @@ public final class KuxiaPackInstaller {
     /** 仅缺失时写入的文件。 */
     private static final String[] ONCE_FILES = {"options.txt", "servers.dat"};
 
+    /** 游戏核心目录。 */
+    private static final String[] CORE_DIRS = {"versions", "libraries", "assets"};
+
     private KuxiaPackInstaller() {
+    }
+
+    public static void installIfNeeded(Context context) {
+        installCoreIfNeeded(context);
+        installModpackIfNeeded(context);
+    }
+
+    /** 核心解压：独立版本戳，CORE_VERSION 升级时重做。 */
+    private static void installCoreIfNeeded(Context context) {
+        File stamp = new File(FCLPath.SHARED_COMMON_DIR, CORE_STAMP_FILE);
+        if (readStamp(stamp) >= KuxiaConfig.CORE_VERSION) {
+            return;
+        }
+        long start = System.currentTimeMillis();
+        try {
+            File gameDir = new File(FCLPath.SHARED_COMMON_DIR);
+            if (!gameDir.isDirectory() && !gameDir.mkdirs()) {
+                Logging.LOG.log(Level.WARNING, "KuxiaPack: cannot create game dir " + gameDir);
+                return;
+            }
+            for (String dir : CORE_DIRS) {
+                RuntimeUtils.copyAssets(context, KuxiaConfig.CORE_ASSET_DIR + "/" + dir, new File(gameDir, dir).getAbsolutePath());
+            }
+            FileUtils.writeText(stamp, String.valueOf(KuxiaConfig.CORE_VERSION));
+            Logging.LOG.log(Level.INFO, "KuxiaPack: core v" + KuxiaConfig.CORE_VERSION
+                    + " installed in " + (System.currentTimeMillis() - start) + " ms");
+        } catch (IOException e) {
+            Logging.LOG.log(Level.SEVERE, "KuxiaPack: core install failed", e);
+        }
     }
 
     /** 已是最新内置整合包版本则快速返回。 */
     public static boolean isUpToDate() {
-        File stamp = new File(FCLPath.SHARED_COMMON_DIR, STAMP_FILE);
+        return readStamp(new File(FCLPath.SHARED_COMMON_DIR, STAMP_FILE)) >= KuxiaConfig.PACK_VERSION;
+    }
+
+    private static int readStamp(File stamp) {
         try {
-            return stamp.isFile() && Integer.parseInt(new String(Files.readAllBytes(stamp.toPath()), StandardCharsets.UTF_8).trim()) >= KuxiaConfig.PACK_VERSION;
+            return stamp.isFile() ? Integer.parseInt(new String(Files.readAllBytes(stamp.toPath()), StandardCharsets.UTF_8).trim()) : -1;
         } catch (Exception e) {
-            return false;
+            return -1;
         }
     }
 
-    public static void installIfNeeded(Context context) {
+    private static void installModpackIfNeeded(Context context) {
         if (isUpToDate()) {
             return;
         }
@@ -75,10 +112,10 @@ public final class KuxiaPackInstaller {
             }
             File stamp = new File(gameDir, STAMP_FILE);
             FileUtils.writeText(stamp, String.valueOf(KuxiaConfig.PACK_VERSION));
-            Logging.LOG.log(Level.INFO, "KuxiaPack: installed v" + KuxiaConfig.PACK_VERSION
-                    + " in " + (System.currentTimeMillis() - start) + " ms");
+            Logging.LOG.log(Level.INFO, "KuxiaPack: modpack v" + KuxiaConfig.PACK_VERSION
+                    + " installed in " + (System.currentTimeMillis() - start) + " ms");
         } catch (IOException e) {
-            Logging.LOG.log(Level.SEVERE, "KuxiaPack: install failed", e);
+            Logging.LOG.log(Level.SEVERE, "KuxiaPack: modpack install failed", e);
         }
     }
 
