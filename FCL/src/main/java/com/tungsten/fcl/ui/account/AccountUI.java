@@ -61,9 +61,14 @@ public class AccountUI extends FCLCommonUI implements View.OnClickListener {
                 .collect(Collectors.toCollection(ArrayList::new));
         if (accountListAdapter == null) {
             accountListAdapter = new AccountListAdapter(getContext(), accountList);
-            recyclerView.setAdapter(accountListAdapter);
         } else {
             accountListAdapter.refresh(accountList);
+        }
+        // 账号页可能从未 onStart（onCreate 未执行、recyclerView 为 null）——
+        // 例如 CreateAccountDialog 创建成功后在页面打开前调用本方法。
+        // 此时只更新数据跳过视图绑定，页面首次启动时 onStart -> refresh 会补上。
+        if (recyclerView != null) {
+            recyclerView.setAdapter(accountListAdapter);
         }
         return Task.runAsync(() -> {
 
