@@ -22,7 +22,7 @@ public final class KuxiaConfig {
      * 整合包版本戳：内置内容更新时递增，
      * 客户端首启/升级后据此重新解压 mods/config/resourcepacks。
      */
-    public static final int PACK_VERSION = 1;
+    public static final int PACK_VERSION = 2;
 
     /** DragonCore 大资源分卷在 assets 中的目录名。 */
     public static final String PARTS_DIR = "kuxia_parts";

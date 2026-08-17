@@ -25,6 +25,8 @@ import java.util.logging.Level;
  *   独立版本戳，正常情况只解压一次；
  * - 整合包部分（kuxia_modpack）：mods/config/resourcepacks 随版本重建；
  *   options.txt/servers.dat 仅缺失时写入，不覆盖玩家已有设置。
+ * - 安装是否"最新"不只看戳记，还校验关键文件实存（自愈）：
+ *   戳记可能来自旧版本残留而文件已被清理/损坏。
  */
 public final class KuxiaPackInstaller {
 
@@ -71,10 +73,28 @@ public final class KuxiaPackInstaller {
             Logging.LOG.log(Level.SEVERE, "KuxiaPack: core install failed", e);
         }
     }
-
     /** 已是最新内置整合包版本则快速返回。 */
     public static boolean isUpToDate() {
-        return readStamp(new File(FCLPath.SHARED_COMMON_DIR, STAMP_FILE)) >= KuxiaConfig.PACK_VERSION;
+        return readStamp(new File(FCLPath.SHARED_COMMON_DIR, STAMP_FILE)) >= KuxiaConfig.PACK_VERSION
+                && filesIntact();
+    }
+
+    /**
+     * 文件实存校验：戳记可能来自旧版本残留（升级安装/目录被清理过），
+     * 关键内容缺失时必须重装，而不是只信戳记。
+     */
+    private static boolean filesIntact() {
+        File gameDir = new File(FCLPath.SHARED_COMMON_DIR);
+        File[] mods = new File(gameDir, "mods").listFiles((d, n) -> n.endsWith(".jar"));
+        if (mods == null || mods.length < EXPECTED_MODS) {
+            return false;
+        }
+        File kxts = new File(gameDir, "resourcepacks/kxts.zip");
+        if (!kxts.isFile() || kxts.length() < 8 * 1024 * 1024) {
+            return false;
+        }
+        File dc = new File(gameDir, "resourcepacks/DragonCore/Resource.zip");
+        return dc.isFile() && dc.length() > 160L * 1024 * 1024;
     }
 
     private static int readStamp(File stamp) {
@@ -84,6 +104,7 @@ public final class KuxiaPackInstaller {
             return -1;
         }
     }
+
 
     private static void installModpackIfNeeded(Context context) {
         if (isUpToDate()) {
