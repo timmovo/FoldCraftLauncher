@@ -8,6 +8,9 @@ public final class KuxiaConfig {
 
     /** 启动游戏后自动连接的服务器地址（host:port）。 */
     public static final String SERVER_IP = "110.42.32.20:25565";
+    /** 游戏与 Forge 版本（与服务端/PC 客户端一致）。 */
+    public static final String GAME_VERSION = "1.12.2";
+    public static final String FORGE_VERSION = "14.23.5.2847";
 
     /** 内置整合包在 assets 中的目录名。 */
     public static final String ASSET_DIR = "kuxia_modpack";

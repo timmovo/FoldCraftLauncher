@@ -169,6 +169,9 @@ class MainActivity : FCLActivity(), OnSelectListener, View.OnClickListener {
             }
         }
 
+        // 酷夏定制：无版本时提示自动安装 1.12.2 + Forge 核心
+        com.tungsten.fcl.util.KuxiaAutoInstaller.installIfNeeded(this)
+
         binding.apply {
             initBackground()
             uiLayout.post {
