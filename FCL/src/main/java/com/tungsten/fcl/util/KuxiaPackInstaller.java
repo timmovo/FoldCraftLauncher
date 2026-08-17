@@ -41,8 +41,10 @@ public final class KuxiaPackInstaller {
 
     /** 游戏核心目录。 */
     private static final String[] CORE_DIRS = {"versions", "libraries", "assets"};
-    /** 自愈校验：mods jar 数量（与 assets/kuxia_modpack 内一致）。 */
-    private static final int EXPECTED_MODS = 14;
+    /** 布局版本戳文件（存 control 目录）。 */
+    private static final String CTRL_STAMP_FILE = ".kuxia_ctrl";
+    /** 布局文件名（与 assets/controllers 一致）。 */
+    private static final String CTRL_FILE = "00000000.json";
 
     private KuxiaPackInstaller() {
     }
@@ -50,6 +52,31 @@ public final class KuxiaPackInstaller {
     public static void installIfNeeded(Context context) {
         installCoreIfNeeded(context);
         installModpackIfNeeded(context);
+        installControllerIfNeeded(context);
+    }
+
+    /**
+     * 布局更新：FCL 只在磁盘无布局时播种 assets 默认布局，
+     * APK 升级后新布局永远不会到达老玩家。此处按 CTRL_VERSION
+     * 强制覆盖 /FCL/control/00000000.json（玩家自定义会被重置，
+     * 服务器专属客户端可接受；版本戳不变时不触碰）。
+     */
+    private static void installControllerIfNeeded(Context context) {
+        File ctrlDir = new File(FCLPath.CONTROLLER_DIR);
+        File stamp = new File(ctrlDir, CTRL_STAMP_FILE);
+        if (readStamp(stamp) >= KuxiaConfig.CTRL_VERSION) {
+            return;
+        }
+        try {
+            if (!ctrlDir.isDirectory() && !ctrlDir.mkdirs()) {
+                return;
+            }
+            RuntimeUtils.copyAssets(context, "controllers/" + CTRL_FILE, new File(ctrlDir, CTRL_FILE).getAbsolutePath());
+            FileUtils.writeText(stamp, String.valueOf(KuxiaConfig.CTRL_VERSION));
+            Logging.LOG.log(Level.INFO, "KuxiaPack: controller v" + KuxiaConfig.CTRL_VERSION + " installed");
+        } catch (IOException e) {
+            Logging.LOG.log(Level.SEVERE, "KuxiaPack: controller install failed", e);
+        }
     }
 
     /** 核心解压：独立版本戳，CORE_VERSION 升级时重做。 */
