@@ -8,7 +8,11 @@ on:
 
 jobs:
   build:
-    name: Build arm64 release
+    name: Build ${{ matrix.arch }} release
+    strategy:
+      matrix:
+        arch: ["arm64", "all"]
+      fail-fast: false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,13 +25,13 @@ jobs:
           java-version: 17
           cache: "gradle"
 
-      - name: Build release apk (arm64)
+      - name: Build release apk (${{ matrix.arch }})
         run: |
           chmod +x gradlew
-          ./gradlew assemblerelease -Darch=arm64 --no-daemon
+          ./gradlew assemblerelease -Darch=${{ matrix.arch }} --no-daemon
 
       - name: Upload apk artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kuxia-apk-arm64
+          name: kuxia-apk-${{ matrix.arch }}
           path: FCL/build/outputs/apk/release/*.apk
