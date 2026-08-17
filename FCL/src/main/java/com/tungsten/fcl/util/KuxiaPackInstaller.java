@@ -41,6 +41,8 @@ public final class KuxiaPackInstaller {
 
     /** 游戏核心目录。 */
     private static final String[] CORE_DIRS = {"versions", "libraries", "assets"};
+    /** 自愈校验：mods jar 数量（与 assets/kuxia_modpack 内一致）。 */
+    private static final int EXPECTED_MODS = 14;
 
     private KuxiaPackInstaller() {
     }
