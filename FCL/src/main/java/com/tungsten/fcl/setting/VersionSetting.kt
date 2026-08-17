@@ -170,9 +170,13 @@ class VersionSetting : Cloneable {
     /**
      * 0 - .minecraft<br></br>
      * 1 - .minecraft/versions/&lt;version&gt;/<br></br>
+     *
+     * 酷夏定制：默认关闭隔离。服务器专属客户端只有 1.12.2 一个版本，
+     * 内置整合包（mods/config/resourcepacks）安装在游戏根目录，
+     * 隔离开启时游戏会到 versions/1.12.2/ 下找 mods 导致模组全部丢失。
      */
     val isolateGameDirProperty: BooleanProperty =
-        SimpleBooleanProperty(this, "isolateGameDir", true)
+        SimpleBooleanProperty(this, "isolateGameDir", false)
     var isIsolateGameDir: Boolean
         get() = isolateGameDirProperty.get()
         set(isolate) {
