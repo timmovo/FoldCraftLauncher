@@ -1,958 +1,1810 @@
 {
-  "id": "00000000",
-  "name": "Default",
-  "version": "1.2.1",
-  "versionCode": 1210,
-  "author": "Tungsten",
-  "description": "Default controller of Fold Craft Launcher.",
-  "controllerVersion": 21,
-  "buttonStyles": [
-    {
-      "name": "Default",
-      "textColor": -1,
-      "textSize": 12,
-      "strokeColor": -12303292,
-      "strokeWidth": 10,
-      "cornerRadius": 100,
-      "fillColor": 0,
-      "textColorPressed": -1,
-      "textSizePressed": 12,
-      "strokeColorPressed": -12303292,
-      "strokeWidthPressed": 10,
-      "cornerRadiusPressed": 100,
-      "fillColorPressed": -3355444
-    }
-  ],
-  "directionStyles": [
-    {
-      "name": "Default",
-      "styleType": "BUTTON",
-      "buttonStyle": {
-        "interval": 50,
-        "textColor": -1,
-        "textSize": 12,
-        "strokeColor": -12303292,
-        "strokeWidth": 10,
-        "cornerRadius": 100,
-        "fillColor": 0,
-        "textColorPressed": -1,
-        "textSizePressed": 12,
-        "strokeColorPressed": -12303292,
-        "strokeWidthPressed": 10,
-        "cornerRadiusPressed": 100,
-        "fillColorPressed": -3355444
+ "id": "00000000",
+ "name": "酷夏探索",
+ "version": "1.2.1",
+ "versionCode": 1210,
+ "author": "Kuxia",
+ "description": "酷夏探索服务器默认布局：含Hotkey功能键(主菜单/属性/回城/宠物/排行/副本等)",
+ "controllerVersion": 21,
+ "buttonStyles": [
+  {
+   "name": "Default",
+   "textColor": -1,
+   "textSize": 12,
+   "strokeColor": -12303292,
+   "strokeWidth": 10,
+   "cornerRadius": 100,
+   "fillColor": 0,
+   "textColorPressed": -1,
+   "textSizePressed": 12,
+   "strokeColorPressed": -12303292,
+   "strokeWidthPressed": 10,
+   "cornerRadiusPressed": 100,
+   "fillColorPressed": -3355444
+  }
+ ],
+ "directionStyles": [
+  {
+   "name": "Default",
+   "styleType": "BUTTON",
+   "buttonStyle": {
+    "interval": 50,
+    "textColor": -1,
+    "textSize": 12,
+    "strokeColor": -12303292,
+    "strokeWidth": 10,
+    "cornerRadius": 100,
+    "fillColor": 0,
+    "textColorPressed": -1,
+    "textSizePressed": 12,
+    "strokeColorPressed": -12303292,
+    "strokeWidthPressed": 10,
+    "cornerRadiusPressed": 100,
+    "fillColorPressed": -3355444
+   },
+   "rockerStyle": {
+    "rockerSize": 400,
+    "bgCornerRadius": 500,
+    "bgStrokeWidth": 20,
+    "bgStrokeColor": -12303292,
+    "bgFillColor": 0,
+    "rockerCornerRadius": 500,
+    "rockerStrokeWidth": 10,
+    "rockerStrokeColor": -12303292,
+    "rockerFillColor": -7829368
+   }
+  }
+ ],
+ "viewGroups": [
+  {
+   "id": "abe49027-5dac-4bb9-865a-dea564664654",
+   "name": "Default",
+   "visibility": "VISIBLE",
+   "viewData": {
+    "buttonList": [
+     {
+      "id": "f93bfc52-e745-4277-a4db-5c85829fb35e",
+      "text": "×",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 800,
+       "yPosition": 750,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       }
       },
-      "rockerStyle": {
-        "rockerSize": 400,
-        "bgCornerRadius": 500,
-        "bgStrokeWidth": 20,
-        "bgStrokeColor": -12303292,
-        "bgFillColor": 0,
-        "rockerCornerRadius": 500,
-        "rockerStrokeWidth": 10,
-        "rockerStrokeColor": -12303292,
-        "rockerFillColor": -7829368
-      }
-    }
-  ],
-  "viewGroups": [
-    {
-      "id": "abe49027-5dac-4bb9-865a-dea564664654",
-      "name": "Default",
-      "visibility": "VISIBLE",
-      "viewData": {
-        "buttonList": [
-          {
-            "id": "f93bfc52-e745-4277-a4db-5c85829fb35e",
-            "text": "×",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 800,
-              "yPosition": 750,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              }
-            },
-            "event": {
-              "pointerFollow": true,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  1000
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "37f97e88-efe1-4052-a2d6-55f82d0f8be6",
-            "text": "■",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "IN_GAME",
-              "xPosition": 875,
-              "yPosition": 750,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  57
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "4881cb4c-6eb4-4183-8cd3-ba56ac969543",
-            "text": "○",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 875,
-              "yPosition": 565,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              }
-            },
-            "event": {
-              "pointerFollow": true,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  1002
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "5aafb6b5-e4e8-42bd-baf6-3385a06a5825",
-            "text": "E",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 720,
-              "yPosition": 1000,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 100
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 100
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  18
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "bbd7a36c-fcc5-46d8-a927-180ed08a035f",
-            "text": "▼",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 950,
-              "yPosition": 935,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 140
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": true,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  42
-                ],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "049b35dd-999c-4de1-af52-53304659addf",
-            "text": "Q",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "IN_GAME",
-              "xPosition": 1000,
-              "yPosition": 400,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  16
-                ],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "3bc32d1b-30ca-44d1-b1ab-f27561ca7edf",
-            "text": "Esc",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 0,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 160
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  1
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "cb02a199-990a-4a3b-9cad-aadcfa5ae046",
-            "text": "F3",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 100,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 160
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  61
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "68d941b2-ff89-4914-bfea-cb95942ccab5",
-            "text": "T",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "IN_GAME",
-              "xPosition": 200,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 160
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  20
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "ed3c2149-7c48-46ae-86c9-5f931251c308",
-            "text": "Input",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 500,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": true,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "43606f98-b410-44de-b7d0-b36a17e54089",
-            "text": "Enter",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 900,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 160
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  28
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          },
-          {
-            "id": "9a4a8307-35fb-46bd-ab55-1e28538f0cd1",
-            "text": "BackSp",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "ALWAYS",
-              "xPosition": 1000,
-              "yPosition": 0,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 160
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 120
-              }
-            },
-            "event": {
-              "pointerFollow": false,
-              "Movable": false,
-              "pressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [
-                  14
-                ],
-                "bindViewGroup": []
-              },
-              "longPressEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "clickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              },
-              "doubleClickEvent": {
-                "autoKeep": false,
-                "autoClick": false,
-                "openMenu": false,
-                "switchTouchMode": false,
-                "input": false,
-                "quickInput": false,
-                "outputText": "",
-                "outputKeycodes": [],
-                "bindViewGroup": []
-              }
-            }
-          }
+      "event": {
+       "pointerFollow": true,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         1000
         ],
-        "directionList": [
-          {
-            "id": "e8545a6e-3a35-4109-b2d5-9f17ff2babd0",
-            "style": "Default",
-            "baseInfo": {
-              "visibilityType": "IN_GAME",
-              "xPosition": 50,
-              "yPosition": 900,
-              "sizeType": "PERCENTAGE",
-              "absoluteWidth": 50,
-              "absoluteHeight": 50,
-              "percentageWidth": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 450
-              },
-              "percentageHeight": {
-                "reference": "SCREEN_HEIGHT",
-                "size": 450
-              }
-            },
-            "event": {
-              "upKeycode": [
-                17
-              ],
-              "downKeycode": [
-                31
-              ],
-              "leftKeycode": [
-                30
-              ],
-              "rightKeycode": [
-                32
-              ],
-              "followOption": "CENTER_FOLLOW",
-              "sneak": true,
-              "sneakKeycode": 42
-            }
-          }
-        ]
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
       }
-    }
-  ]
+     },
+     {
+      "id": "37f97e88-efe1-4052-a2d6-55f82d0f8be6",
+      "text": "■",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 875,
+       "yPosition": 750,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         57
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "4881cb4c-6eb4-4183-8cd3-ba56ac969543",
+      "text": "○",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 875,
+       "yPosition": 565,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       }
+      },
+      "event": {
+       "pointerFollow": true,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         1002
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "5aafb6b5-e4e8-42bd-baf6-3385a06a5825",
+      "text": "E",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 720,
+       "yPosition": 1000,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 100
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 100
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         18
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "bbd7a36c-fcc5-46d8-a927-180ed08a035f",
+      "text": "▼",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 950,
+       "yPosition": 935,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 140
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": true,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         42
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "049b35dd-999c-4de1-af52-53304659addf",
+      "text": "Q",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 1000,
+       "yPosition": 400,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         16
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "3bc32d1b-30ca-44d1-b1ab-f27561ca7edf",
+      "text": "Esc",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 0,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 160
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         1
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "cb02a199-990a-4a3b-9cad-aadcfa5ae046",
+      "text": "F3",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 100,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 160
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         61
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "68d941b2-ff89-4914-bfea-cb95942ccab5",
+      "text": "T",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 200,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 160
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         20
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "ed3c2149-7c48-46ae-86c9-5f931251c308",
+      "text": "Input",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 500,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": true,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "43606f98-b410-44de-b7d0-b36a17e54089",
+      "text": "Enter",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 900,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 160
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         28
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "9a4a8307-35fb-46bd-ab55-1e28538f0cd1",
+      "text": "BackSp",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "ALWAYS",
+       "xPosition": 1000,
+       "yPosition": 0,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 160
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 120
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         14
+        ],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "d2449e31-5c31-4af5-8b33-8a9fd28233cd",
+      "text": "主菜单F",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 300,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         33
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "f3c37792-3c9a-4477-81b6-432e6c728f18",
+      "text": "属性I",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 380,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         23
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "1d7a447f-cb9d-4c4c-956d-3493c6ad6b9e",
+      "text": "回城H",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 460,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         35
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "a657e9a2-ebb7-4c71-bd74-58bb528d3b69",
+      "text": "宠物P",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 540,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         25
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "556c47fd-130f-4ad2-a13a-6371a8de4f42",
+      "text": "排行G",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 620,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         34
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "4667b3a7-f169-42fe-89ee-1cbaeaab77f1",
+      "text": "副本J",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 700,
+       "yPosition": 100,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         36
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "2b43579c-858d-4e72-87de-8d65c5562fbd",
+      "text": "视角K",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 300,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         37
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "741456cc-afaa-40c0-928c-03ec91a5f8b2",
+      "text": "直播U",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 380,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         22
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "1640d7be-b9c3-4997-9db0-3aed68c4e041",
+      "text": "功能X",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 460,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         45
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "d4f755dc-333b-4ef1-b7ae-41bebc5f7faa",
+      "text": "模式V",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 540,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         47
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "ca68fef3-13ae-4c7a-a8aa-d8e5441b7a40",
+      "text": "扩展Z",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 620,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         44
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     },
+     {
+      "id": "f5aaf6be-27dd-4ba2-be48-402836e1a82b",
+      "text": "菜单`",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 700,
+       "yPosition": 200,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 70
+       }
+      },
+      "event": {
+       "pointerFollow": false,
+       "Movable": false,
+       "pressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "longPressEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       },
+       "clickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [
+         41
+        ],
+        "bindViewGroup": []
+       },
+       "doubleClickEvent": {
+        "autoKeep": false,
+        "autoClick": false,
+        "openMenu": false,
+        "switchTouchMode": false,
+        "input": false,
+        "quickInput": false,
+        "outputText": "",
+        "outputKeycodes": [],
+        "bindViewGroup": []
+       }
+      }
+     }
+    ],
+    "directionList": [
+     {
+      "id": "e8545a6e-3a35-4109-b2d5-9f17ff2babd0",
+      "style": "Default",
+      "baseInfo": {
+       "visibilityType": "IN_GAME",
+       "xPosition": 50,
+       "yPosition": 900,
+       "sizeType": "PERCENTAGE",
+       "absoluteWidth": 50,
+       "absoluteHeight": 50,
+       "percentageWidth": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 450
+       },
+       "percentageHeight": {
+        "reference": "SCREEN_HEIGHT",
+        "size": 450
+       }
+      },
+      "event": {
+       "upKeycode": [
+        17
+       ],
+       "downKeycode": [
+        31
+       ],
+       "leftKeycode": [
+        30
+       ],
+       "rightKeycode": [
+        32
+       ],
+       "followOption": "CENTER_FOLLOW",
+       "sneak": true,
+       "sneakKeycode": 42
+      }
+     }
+    ]
+   }
+  }
+ ]
 }
