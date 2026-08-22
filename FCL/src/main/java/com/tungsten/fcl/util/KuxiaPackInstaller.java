@@ -43,7 +43,7 @@ public final class KuxiaPackInstaller {
     private static final String[] CORE_DIRS = {"versions", "libraries", "assets"};
 
     /** 自愈校验：mods jar 数量（与 assets/kuxia_modpack 内一致）。 */
-    private static final int EXPECTED_MODS = 14;
+    private static final int EXPECTED_MODS = 16;
     /** 布局版本戳文件（存 control 目录）。 */
     private static final String CTRL_STAMP_FILE = ".kuxia_ctrl";
     /** 布局文件名（与 assets/controllers 一致）。 */

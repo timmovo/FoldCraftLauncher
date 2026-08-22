@@ -1820,18 +1820,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 310,
-       "yPosition": 880,
+       "xPosition": 430,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -1891,18 +1891,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 370,
-       "yPosition": 880,
+       "xPosition": 520,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -1962,18 +1962,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 430,
-       "yPosition": 880,
+       "xPosition": 610,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2033,18 +2033,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 490,
-       "yPosition": 880,
+       "xPosition": 700,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2104,18 +2104,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 550,
-       "yPosition": 880,
+       "xPosition": 790,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2175,18 +2175,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 610,
-       "yPosition": 880,
+       "xPosition": 880,
+       "yPosition": 810,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2246,18 +2246,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 670,
+       "xPosition": 430,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2317,18 +2317,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 730,
+       "xPosition": 520,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2388,18 +2388,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 790,
+       "xPosition": 610,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2459,18 +2459,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 850,
+       "xPosition": 700,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2530,18 +2530,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 910,
+       "xPosition": 790,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
@@ -2601,18 +2601,18 @@
       "style": "Default",
       "baseInfo": {
        "visibilityType": "IN_GAME",
-       "xPosition": 970,
+       "xPosition": 880,
        "yPosition": 880,
        "sizeType": "PERCENTAGE",
        "absoluteWidth": 50,
        "absoluteHeight": 50,
        "percentageWidth": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        },
        "percentageHeight": {
         "reference": "SCREEN_HEIGHT",
-        "size": 50
+        "size": 55
        }
       },
       "event": {
