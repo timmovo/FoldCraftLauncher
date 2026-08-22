@@ -28,7 +28,7 @@ public final class KuxiaConfig {
     public static final String PARTS_DIR = "kuxia_parts";
 
     /** 按键布局版本戳：assets 布局变更时递增，强制覆盖玩家磁盘旧布局。 */
-    public static final int CTRL_VERSION = 2;
+    public static final int CTRL_VERSION = 3;
 
     private KuxiaConfig() {
     }
